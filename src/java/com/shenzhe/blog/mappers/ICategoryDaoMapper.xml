@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : UserMapper.xml
+    Created on : 2012年2月24日, 下午3:51
+    Author     : shenzhe
+    Description:
+        Purpose of the document follows.
+-->
+
+<!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.shenzhe.blog.dao.ICategoryDao">
+    <select id="selectOne" parameterType="int" resultType="CategoryEntity">
+        select * from category where id=#{id}
+    </select>
+    
+    <select id="selectList" resultType="CategoryEntity">
+        select * from category order by id desc
+    </select>
+    
+    <insert id="insert" parameterType="CategoryEntity">
+        insert into category (title) values (#{title})
+    </insert>
+    
+    <update id="update" parameterType="CategoryEntity">
+        update category set title=#{title} where id=#{id}
+    </update>
+    
+    <delete id="delete" parameterType="int">
+        delete from category where id = #{id}
+    </delete>
+</mapper>

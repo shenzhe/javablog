@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : UserMapper.xml
+    Created on : 2012年2月24日, 下午3:51
+    Author     : shenzhe
+    Description:
+        Purpose of the document follows.
+-->
+
+<!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.shenzhe.blog.entity.UserEntity">
+    <select id="selectUser" parameterType="map" resultType="UserEntity">
+        select * from user where username=#{username}
+    </select>
+</mapper>

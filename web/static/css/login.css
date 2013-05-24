@@ -1,0 +1,17 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,button { margin:0;padding:0;}
+body{ font:12px/20px Arial, Helvetica, sans-serif; color:#375A90; background:#e9eaeb;}
+input{ font-size:12px; font-family:Arial, Helvetica, sans-serif;}
+.login{ width:300px; margin:50px auto 0;}
+.login .login-title{ background:url(../image/login.gif) no-repeat; width:300px; height:50px;}
+.login-main{ border:1px solid #6786b5; overflow:hidden; }
+.login-main .login-header{ background:url(../image/admin-header.gif) no-repeat; border-bottom:1px solid #6786b5; height:26px; text-align:center; line-height:26px; color:#fff; font-weight:bold; font-size:14px;}
+.login-main .login-content{ padding:10px; background:#EDF6FF; overflow:hidden; height:100%;}
+.login-main .login-content label{ width:60px; text-align:right; display:inline-block;}
+.login-main .login-content label.label-ch{ width:180px; text-align:left; vertical-align:middle; margin:5px 0 5px 65px;}
+.login-main .login-content label.label-ch input{ vertical-align:middle; margin-right:5px;}
+.login-main .login-content .input{ border:1px solid #6786b5; padding:2px; height:18px; line-height:18px; width:200px; margin-top:8px;}
+.login-main .login-content .login-button{ margin-top:10px;}
+.login-main .login-content .captcha{ width: 100px;}
+.loginbutton{ background:url(../image/admin-header.gif);border:1px solid #6786b5;font:12px/22px Arial, Helvetica, sans-serif;height: 22px;text-align:center;vertical-align:middle;color:#fff; font-weight:bold; padding:0 5px; margin-left:5px;}
+.fr{ float:right; margin-top:10px; display:inline;}
+img{ vertical-align:middle;}

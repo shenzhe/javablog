@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : UserMapper.xml
+    Created on : 2012年2月24日, 下午3:51
+    Author     : shenzhe
+    Description:
+        Purpose of the document follows.
+-->
+
+<!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.shenzhe.blog.dao.ICommentDao">
+    <select id="selectList" parameterType="map" resultType="CommentEntity">
+        select * from comment 
+        <where>
+            <if test="blogid != 0">
+                blogid = #{blogid} 
+            </if>
+            <if test="categoryid != 0">
+                categoryid = #{categoryid} 
+            </if>
+        </where>
+        order by id desc
+        <if test="start != null">
+            limit #{start}, #{pagerows}
+        </if>
+    </select>
+    
+    <select id="selectCount" parameterType="map" resultType="int">
+        select count(*) from comment
+        <where>
+            <if test="categoryid != 0">
+                categoryid = #{categoryid}
+            </if>
+            <if test="blogid != 0">
+                blogid = #{blogid}
+            </if>
+        </where>
+    </select>
+    
+    <insert id="insert" parameterType="CommentEntity">
+        insert into comment (blogid,categoryid,username,content,datetime) 
+        values 
+        (#{blogid},#{categoryid},#{username},#{content},#{datetime})
+    </insert>
+    
+    <delete id="delete" parameterType="map">
+        delete from comment
+        <where>
+            <if test="id != 0">
+                id = #{id}
+            </if>
+            <if test="categoryid != 0">
+                categoryid = #{categoryid}
+            </if>
+            <if test="blogid != 0">
+                blogid = blogid
+            </if>
+        </where>
+    </delete>
+</mapper>
